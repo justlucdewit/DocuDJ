@@ -1,30 +1,68 @@
 <template>
-  <div id="nav">
+  <Navigator/>
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
-</template>
+  <router-view/> -->
+
+  <main>
+    <section style="background: red">
+      <Hierarchy />
+    </section>
+
+    <section style="background: green">
+      <RenderDoc />
+    </section>
+
+    <section style="background: blue">
+      <InThisDoc />
+    </section>
+  </main>
+</template> 
+
+<script>
+import Navigator from './components/Navigator.vue';
+import Hierarchy from './components/Hierarchy.vue';
+import InThisDoc from './components/InThisDoc.vue';
+import RenderDoc from './components/RenderDoc.vue';
+
+export default {
+  components: {
+    Hierarchy,
+    Navigator,
+    InThisDoc,
+    RenderDoc
+  }
+}
+</script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  background: #171717;
+  padding: 0;
+  margin: 0;
+  font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-#nav {
-  padding: 30px;
+main {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  margin: 10px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  section {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: transparent !important; // Remove for debug
   }
+}
+
+a {
+  color: #75b6e7;
+}
+
+a:visited {
+  color: #ac7ee1;
 }
 </style>
