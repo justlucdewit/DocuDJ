@@ -2,7 +2,7 @@
     "settings": {
         "searchbar": true,
         "logo": true,
-        "maxInThisArticleCount": 3
+        "maxInThisArticleCount": 5
     },
 
     "title": "PEA Programming Language",

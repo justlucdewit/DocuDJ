@@ -47,8 +47,8 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 300px auto 300px;
-  margin: 10px;
+  grid-template-columns: 300px auto 350px;
+  margin: 10px 30px 10px 10px;
 
   section {
     display: inline-block;

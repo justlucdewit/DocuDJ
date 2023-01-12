@@ -27,7 +27,7 @@ export default {
 #navigator {
     background: #171717;
     color: #e6e6e6;
-    padding: 10px 50px;
+    padding: 10px 30px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
