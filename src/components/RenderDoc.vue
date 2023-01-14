@@ -18,12 +18,6 @@ export default {
         docContent: ''
     }),
 
-    // mounted() {
-    //     // See if we have a matching content item
-    //     let contentItem = this.content.find(item => '/docs/' + item.url === this.$route.path);
-    //     console.log(contentItem);
-    // },
-
     watch: {
         async $route (to, from){
             const contentItem = this.content.find(item => '/docs/' + item.url === this.$route.path);
@@ -84,6 +78,24 @@ export default {
         position: relative;
         top: -30px;
         color: #e6e6e6;
+    }
+
+    code {
+        background: #404040;
+        padding: 0px 5px;
+        font-size: 16px;
+    }
+
+    pre code {
+        display: block;
+        background: #404040;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    hr {
+        width: 50%;
+        margin: 60px auto;
     }
 }
 

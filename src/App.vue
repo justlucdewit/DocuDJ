@@ -33,6 +33,16 @@ export default {
     Navigator,
     InThisDoc,
     RenderDoc
+  },
+
+  mounted() {
+    const that = this;
+    setTimeout(() => {
+      if (!that.$route.params.docName) {
+        console.log(content[0].url)
+        that.$router.push('/docs/' + content[0].url)
+      }
+    }, 500)
   }
 }
 </script>

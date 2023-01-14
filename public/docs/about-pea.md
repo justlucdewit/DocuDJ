@@ -5,10 +5,15 @@ The Pea general purpose procedural programming language. The langauge is still c
 
 The syntax and concepts are mainly inspired by the Microsoft AL programming language, with some improvements, some simplifications for parsing reasons, and some inspirations from other languages like algol/pascal/ada.
 
+---
+
 ## Inspiration
 Most of the inspiration for Pea came from the AL programming language which is an event based language for making extensions on Microsoft Business Central. AL is in turn inspired by C/AL, which was in turn inspired by pascal. I took the AL programming language, worked out all aspects of which I hate (it being an event based language, inconsistency with scope brackets, it not being able to be ran standalone, it being partially closed source, the silly string escape system, and much more), and tried to improve it on these aspects. I also made the syntax a lot more easy to parse by having the syntax be a bit verbose.
 
 I want Pea to be able to run basically anywhere (in the web, in the JVM, on low level systems, as native executable), and thats why I decided to have multiple runtime options for the language. The first runtime option I will start developing will be the interpreter, but later im also planning to make build in transpilation to other languages like Javascript, Python, PHP, and AL.
+
+
+---
 
 ## Work in progress
 Pea is still very much under development, and currently its not ready for production nor is there a functional interpreter/compiler. Currently the idea of the language is fully developed and planned out, and there is good progress in development of the parser, and im already very happy with it.
