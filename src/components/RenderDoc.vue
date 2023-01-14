@@ -22,7 +22,7 @@ export default {
         async $route (to, from){
             const contentItem = this.content.find(item => '/docs/' + item.url === this.$route.path);
             
-            const content = (await axios.get('/docs/' + contentItem.url + '.md')).data;
+            const content = (await axios.get('/docs/' + contentItem.file)).data;
 
             this.docContent = this.render(content, contentItem);
         }
@@ -96,7 +96,27 @@ export default {
     hr {
         width: 50%;
         margin: 60px auto;
+        border-style: dashed;
     }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #404040;
+        margin: 30px 0;
+        column-gap: 50px;
+    }
+
+    table tr {
+        border: 1px solid #404040;
+    }
+
+    table td {
+        padding: 5px 20px;
+    }
+
+
 }
 
 </style>

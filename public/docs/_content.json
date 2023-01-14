@@ -31,13 +31,13 @@
         "file": "functions.md"
     },
     {
-        "title": "Variables",
-        "url": "variables",
-        "file": "variables.md"
+        "title": "Function Variables",
+        "url": "function-variables",
+        "file": "functionVariables.md"
     },
     {
         "title": "Function arguments",
         "url": "function-args",
-        "file": "function-args.md"
+        "file": "functionArgs.md"
     }
 ]
