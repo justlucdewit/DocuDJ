@@ -1,5 +1,5 @@
 <template>
-  <div class="in-this-doc">
+  <div class="in-this-doc" v-if="config.settings.articleSections">
     <div class="header">
         <span class="material-symbols-outlined">menu</span>
         In this article

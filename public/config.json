@@ -2,6 +2,8 @@
     "settings": {
         "searchbar": true,
         "logo": true,
+        "downloadAsPDF": true,
+        "articleSections": true,
         "maxInThisArticleCount": 5
     },
 

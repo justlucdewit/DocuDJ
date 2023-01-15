@@ -34,7 +34,6 @@ hljs.registerLanguage('pea', function(hljs) {
             hljs.NUMBER_MODE,
             hljs.COMMENT('\-\-\-', '\-\-\-'),
             hljs.COMMENT('\-\-', '\n')
-            
         ],
     };
 });

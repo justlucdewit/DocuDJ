@@ -6,7 +6,7 @@
       :item="item"
     />
 
-    <span class="download-pdf-wrapper">
+    <span class="download-pdf-wrapper" v-if="config.settings.downloadAsPDF">
       <hr />
       <span class="download-pdf">
         <span class="material-symbols-outlined">
@@ -25,7 +25,8 @@ import HierarchyItem from './HierarchyItem.vue'
 
 export default {
     data: () => ({
-        content: content
+        content: content,
+        config: config
     }),
 
     components: {
