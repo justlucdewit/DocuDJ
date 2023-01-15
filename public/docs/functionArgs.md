@@ -11,7 +11,7 @@ The ARGS section of the function is defined after the function name, yet before 
 
 ## Example
 A few examples of this is:
-```
+```pea
 CODEUNIT Shapes
 BEGIN
     -- Func with 0 arguments (VARS could be left out)

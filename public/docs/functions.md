@@ -8,7 +8,7 @@ Functions are started with the `FUNCTION` keyword, followed by the name of the f
 ## Example
 
 An example of such function would look like this:
-```
+```pea
 CODEUNIT Shapes
 BEGIN
     FUNCTION Rectangle RETURNS void

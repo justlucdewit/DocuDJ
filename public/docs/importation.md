@@ -7,7 +7,7 @@ In the pea programming language, you can import other codeunits into from other 
 # Example
 
 an example of this is the following:
-```
+```pea
 IMPORT "libraries/Shapes.pea"
 
 CODEUNIT Main

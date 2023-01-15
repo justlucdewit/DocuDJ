@@ -25,6 +25,7 @@ export default {
             const content = (await axios.get('/docs/' + contentItem.file)).data;
 
             this.docContent = this.render(content, contentItem);
+            hljs.highlightAll();
         }
     },
 
@@ -91,6 +92,23 @@ export default {
         background: #404040;
         padding: 10px;
         font-size: 16px;
+        color: white;
+
+        .hljs-number {
+            color: #ecad31;
+        }
+
+        .hljs-string {
+            color: #5ac8ff
+        }
+
+        .hljs-keyword {
+            color: #eaff30;
+        }
+
+        .hljs-built_in {
+            color: #5ac8ff;
+        }
     }
 
     hr {

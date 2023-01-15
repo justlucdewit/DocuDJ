@@ -9,7 +9,7 @@ A file can contain multiple codeunits, and there must always be a codeunit named
 
 # Example
 
-```
+```pea
 -- This CU is the starting point of your program
 CODEUNIT Main
 BEGIN

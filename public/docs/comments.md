@@ -8,7 +8,7 @@ Comments can also be used to 'comment out code' which means you turn code into a
 ---
 
 ## Example
-```
+```pea
 -- This is a normal comments
 
 ---

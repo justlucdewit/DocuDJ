@@ -10,7 +10,7 @@ Just like function arguments, they are notated beginning with a name, called the
 # Example
 
 An example of this looks like this:
-```
+```pea
 CODEUNIT Shapes
 BEGIN
     -- Func with 2 arguments
