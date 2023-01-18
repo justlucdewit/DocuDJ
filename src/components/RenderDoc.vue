@@ -20,7 +20,7 @@ export default {
 
     watch: {
         async $route (to, from){
-            const contentItem = this.content.find(item => '/docs/' + item.url === this.$route.path);
+            const contentItem = this.findContentItem(this.$route.path);
             
             const content = (await axios.get('/docs/' + contentItem.file)).data;
 
@@ -30,6 +30,28 @@ export default {
     },
 
     methods: {
+        findContentItem(name, items = null) {
+            if (!items) {
+                items = this.content;
+            }
+
+            const found = items.find(item => '/docs/' + item.url === name);
+
+            if (found) {
+                return found;
+            }
+
+            for (const item of items) {
+                if (item.children) {
+                    const found = this.findContentItem(name, item.children);
+
+                    if (found) {
+                        return found;
+                    }
+                }
+            }
+        },
+
         render(content, contentItem) {
             let html = marked.parse(content);
 
