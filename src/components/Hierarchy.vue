@@ -40,13 +40,17 @@ export default {
       async downloadAsPDF() {
         const doc = new jsPDF();
         const docName = this.config.downloadDocName ?? 'download.pdf';
-        let html = "";
+        var html = "";
 
-        this.content.forEach(async page => {
+        console.log(this.content)
+
+        for (const page of this.content) {
           const content = (await axios.get('/docs/' + page.file)).data;
           const htmlContent = this.render(content, page);
           html += htmlContent;
-        });
+        }
+
+        console.log(html)
 
         doc.html(html, {
           callback: function(doc) {
