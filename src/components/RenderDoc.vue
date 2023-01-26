@@ -1,8 +1,4 @@
 <template>
-    <div class="breadcrumbs">
-        <a href="/a">Documentation</a> /
-        <a href="/b">About Pea</a>
-    </div>
     <div id="documentation-render" v-html="docContent">
     </div>
 </template>
@@ -82,12 +78,6 @@ export default {
 </script>
 
 <style lang="scss">
-.breadcrumbs {
-    color: #e6e6e6;
-    font-size: 18px;
-    margin: 10px 30px;
-}
-
 #documentation-render {
     color: #e6e6e6;
     padding: 30px;
@@ -95,12 +85,19 @@ export default {
     h1 {
         font-size: 40px;
         margin-top: 0;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 40px;
+            font-size: 25px;
+            margin-bottom: 28px;
+        }
     }
 
     .article-info {
         position: relative;
         top: -30px;
         color: #e6e6e6;
+        z-index: -100000;
     }
 
     code {
@@ -157,6 +154,13 @@ export default {
     }
 
 
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+
+        code {
+            font-size: 12px !important;
+        }
+    }
 }
 
 </style>

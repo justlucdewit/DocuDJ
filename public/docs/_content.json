@@ -8,7 +8,14 @@
     {
         "title": "Installation",
         "url": "installation",
-        "file": "installation.md"
+        "file": "installation.md",
+        "children": [
+            {
+                "title": "Windows",
+                "url": "windows",
+                "file": "testing.md"
+            }
+        ]
     },
     {
         "title": "Comments",

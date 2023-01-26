@@ -15,7 +15,7 @@
       <RenderDoc />
     </section>
 
-    <section style="background: blue">
+    <section id="in-this-doc" style="background: blue">
       <InThisDoc />
     </section>
   </main>
@@ -60,11 +60,25 @@ main {
   grid-template-columns: 300px auto 350px;
   margin: 10px 30px 10px 10px;
 
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 300px auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 0px 100%;
+  }
+
   section {
     display: inline-block;
     width: 100%;
     height: 100%;
     background: transparent !important; // Remove for debug
+  }
+
+  #in-this-doc {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
 }
 

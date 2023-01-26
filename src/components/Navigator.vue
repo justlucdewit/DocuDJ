@@ -6,12 +6,12 @@
             <!-- <div class="v-divider"></div> -->
         </span>
         
-        <span class="flex-center" v-if="config.settings.searchbar">
+        <!-- <span class="flex-center" v-if="config.settings.searchbar">
             <span class="material-symbols-outlined">
                 search
             </span>
             <input type="text" id="search-bar" placeholder="Search...">
-        </span>
+        </span> -->
     </div>
 </template>
 
@@ -33,6 +33,10 @@ export default {
     justify-content: space-between;
     border-bottom: 1px solid #404040;
     line-height: 2;
+
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
+    }
 
     .v-divider {
         border-left: 2px solid #e6e6e6;

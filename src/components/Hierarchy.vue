@@ -1,22 +1,28 @@
 <template>
-  <div id="hierarchy">
-    <hierarchy-item
-      v-for="(item, index) in content"
-      :key="index"
-      :item="item"
-    />
-
-    <span class="download-pdf-wrapper" v-if="config.settings.downloadAsPDF" @click="downloadAsPDF()">
-      <hr />
-      <span class="download-pdf">
-        <span class="material-symbols-outlined">
-          picture_as_pdf
-        </span>
-        Download as PDF
+  <div id="hierarchy" :class="{'collapsed': !hierarchyOpened}">
+    <span id="hierarchy-toggle" @click="hierarchyOpened = !hierarchyOpened">
+      <span class="material-symbols-outlined">
+        menu
       </span>
-      <hr />
     </span>
+    <span :id="!hierarchyOpened ? 'hierarchy-content' : ''">
+      <hierarchy-item
+        v-for="(item, index) in content"
+        :key="index"
+        :item="item"
+      />
 
+      <span class="download-pdf-wrapper" v-if="config.settings.downloadAsPDF" @click="downloadAsPDF()">
+        <hr />
+        <span class="download-pdf">
+          <span class="material-symbols-outlined">
+            picture_as_pdf
+          </span>
+          Download as PDF
+        </span>
+        <hr />
+      </span>
+    </span>
   </div>
 </template>
 
@@ -29,7 +35,8 @@ import axios from 'axios'
 export default {
     data: () => ({
         content: content,
-        config: config
+        config: config,
+        hierarchyOpened: true
     }),
 
     components: {
@@ -96,7 +103,46 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#hierarchy {
+  width: 300px;
+  height: 100%;
 
+  #hierarchy-toggle {
+    display: none;
+    color: white;
+    justify-content: center;
+    padding: 20px 15px;
+
+    &:hover {
+      cursor: pointer;
+      background: #303030;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hierarchy {
+    position: sticky;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    background: #404040;
+
+    &.collapsed {
+      width: 50px;
+      height: auto;
+    }
+
+    #hierarchy-toggle {
+      display: flex;
+    }
+  }
+
+  #hierarchy-content {
+    display: none;
+    width: 100px;
+  }
+}
 
 .download-pdf-wrapper {
   margin-top: 40px;
