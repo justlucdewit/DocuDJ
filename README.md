@@ -4,7 +4,7 @@ DocuDJ is my custom documentation generator that lets you create feature-rich cu
 ![image](https://user-images.githubusercontent.com/37410843/212195789-737285ef-275a-4400-9b89-85056745dc51.png)
 
 ## How to use
-1. Download the latest release from the [releases page]()
+1. Download the latest release from the [releases page](https://github.com/justlucdewit/DocuDJ/releases)
 2. Unzip the file, you  should find a 'release' folder
 3. Rename the 'release' folder to the name of your project
 4. Open the root of this folder in your terminal, and server it with something like [npm serve](https://www.npmjs.com/package/serve)
