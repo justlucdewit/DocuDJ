@@ -1,4 +1,4 @@
-# DocuDJ (Work in progress)
+# DocuDJ (version 1.0.0)
 DocuDJ is my custom documentation generator that lets you create feature-rich customizable documentation websites for your projects, in the style of the Micorosft documentation.
 
 ![image](https://user-images.githubusercontent.com/37410843/212195789-737285ef-275a-4400-9b89-85056745dc51.png)
